@@ -6,7 +6,16 @@ import { ImageSlider } from '../../components/ImageSlider';
 import {
   Container,
   Header,
-  CarImages
+  CarImages,
+  Content,
+  Details,
+  Description,
+  Brand,
+  Name,
+  Rent,
+  Period,
+  Price,
+  About
 } from './styles';
 
 export function CarDetails(){
@@ -21,6 +30,25 @@ export function CarDetails(){
           imagesUrl={['https://img2.gratispng.com/20180201/jpq/kisspng-car-audi-christmas-jeep-wrangler-vehicle-audi-5a736b7e173691.4030715215175135980951.jpg']}
         />
       </CarImages>
+
+      <Content>
+        <Details>
+          <Description>
+            <Brand>Lamborghini</Brand>
+            <Name>Huracan</Name>
+          </Description>
+
+          <Rent>
+            <Period>Ao dia</Period>
+            <Price>R$ 580</Price>
+          </Rent>
+        </Details>
+
+        <About>
+          Este é automóvel desportivo. Surgiu do lendário touro de lide indultado na praça Real Maestranza de Sevilla. É um belíssimo carro para quem gosta de acelerar.
+        </About>
+      </Content>
+      
 
     </Container>
   );
