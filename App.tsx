@@ -1,7 +1,7 @@
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 
-import { CarDetails } from './src/screens/CarDetails'
+import { Scheduling } from './src/screens/Scheduling'
 
 import {
   useFonts,
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <CarDetails />
+      <Scheduling />
     </ThemeProvider>
   )
 }
