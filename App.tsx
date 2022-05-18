@@ -1,7 +1,9 @@
+import 'react-native-gesture-handler';
+
 import React from 'react';
 import AppLoading from 'expo-app-loading';
 
-import { SchedulingComplete } from './src/screens/SchedulingComplete'
+import { Routes } from './src/routes'
 
 import {
   useFonts,
@@ -34,7 +36,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SchedulingComplete />
+      <Routes />
     </ThemeProvider>
   )
 }

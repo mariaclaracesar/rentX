@@ -12,6 +12,8 @@ import gasolineSvg from '../../assets/gasoline.svg'
 import exchangeSvg from '../../assets/exchange.svg'
 import peopleSvg from '../../assets/people.svg'
 
+import { useNavigation } from '@react-navigation/native';
+
 import {
   Container,
   Header,
@@ -30,6 +32,12 @@ import {
 } from './styles';
 
 export function CarDetails(){
+  const navigation = useNavigation();
+
+  function handleConfirmRental(){
+    navigation.navigate('Scheduling')
+  }
+
   return (
     <Container>
       <Header>
@@ -38,7 +46,7 @@ export function CarDetails(){
 
       <CarImages>
         <ImageSlider 
-          imagesUrl={['https://img2.gratispng.com/20180201/jpq/kisspng-car-audi-christmas-jeep-wrangler-vehicle-audi-5a736b7e173691.4030715215175135980951.jpg']}
+          imagesUrl={['https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png']}
         />
       </CarImages>
 
@@ -72,7 +80,8 @@ export function CarDetails(){
 
       <Footer>
         <Button 
-          title='Confirmar' 
+          title='Escolher período do aluguel' 
+          onPress={handleConfirmRental}
         />
       </Footer>
       

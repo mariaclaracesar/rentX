@@ -1,13 +1,15 @@
 import React from 'react';
-import { useWindowDimensions } from 'react-native'
+import { StatusBar, useWindowDimensions } from 'react-native'
 
 import LogoSvg from '../../assets/logo_background_gray.svg'
 import DoneSvg from '../../assets/done.svg'
 
 import { ConfirmButton } from '../../components/ConfirmButton';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Container,
+  WrapperLogo,
   Content,
   Title,
   Message,
@@ -15,11 +17,23 @@ import {
 } from './styles';
 
 export function SchedulingComplete(){
-const { width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
+  const navigation = useNavigation();
+
+  function handleConfirm(){
+    navigation.navigate('Home')
+  }
 
   return (
     <Container>
-      <LogoSvg width={width} />
+      <StatusBar 
+        barStyle='light-content'
+        translucent
+        backgroundColor='transparent'
+      />
+      <WrapperLogo>
+        <LogoSvg width={width} />
+      </WrapperLogo>
 
       <Content>
         <DoneSvg width={80} height={80}/>
@@ -30,11 +44,12 @@ const { width } = useWindowDimensions();
           até a concessionária da RENTX {'\n'}
           pegar o seu automóvel.
         </Message>
-      </Content>
+      </Content> 
 
       <Footer>
         <ConfirmButton 
           title='Ok'
+          onPress={handleConfirm}
         />
       </Footer>
     </Container>
