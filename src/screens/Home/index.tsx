@@ -1,10 +1,10 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'react-native'
 import { RFValue } from 'react-native-responsive-fontsize'
 
 import Logo from '../../assets/logo.svg'
+import { api } from '../../services/api'
 
 import { Car } from '../../components/Car';
 
@@ -32,6 +32,15 @@ export function Home(){
   function handleCarDetails() {
     navigation.navigate('CarDetails')
   }
+
+  useEffect(() => {
+    async function fetchCars(){
+      const response = await api.get('/cars')
+      console.log(response)
+    }
+
+    fetchCars();
+  }, [])
 
   return (
     <Container>

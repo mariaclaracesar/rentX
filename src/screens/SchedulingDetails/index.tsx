@@ -58,7 +58,7 @@ export function SchedulingDetails(){
 
       <CarImages>
         <ImageSlider 
-          imagesUrl={['https://img2.gratispng.com/20180201/jpq/kisspng-car-audi-christmas-jeep-wrangler-vehicle-audi-5a736b7e173691.4030715215175135980951.jpg']}
+          imagesUrl={['https://freepngimg.com/thumb/audi/35227-5-audi-rs5-red.png']}
         />
       </CarImages>
 
