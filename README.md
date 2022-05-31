@@ -1,11 +1,11 @@
 <h1 align="center">
-  <img alt="Rentx" title="Rentx" src=".github/logo.png" />
+  <img alt="Rentx" title="Rentx" src="assets/logo.svg" />
 </h1>
 
 <br>
 
 <p align="center">
-  <img alt="Rentx" src=".github/capa.png" width="100%">
+  <img alt="Rentx" src="assets/capa.png" width="100%">
 </p>
 
 ## ✨ Tecnologias
@@ -24,7 +24,7 @@ Aplicativo para aluguel de carros.
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/vThJ6qrb4HDT6RfO5sJGu0/GoFinances-Ignite?node-id=39329%3A1625). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
+Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/4ojyGi2mGuQaGK0sUHMAqB/RentX-Ignite). É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
 
 ## 🚀 Como executar
 
