@@ -50,7 +50,7 @@ export function Home(){
         translucent
       />
 
-    {/* <Header>
+    <Header>
       <HeaderContent>
           <Logo
             width={RFValue(108)}
@@ -60,7 +60,7 @@ export function Home(){
             Total de 12 carros
           </TotalCars>
         </HeaderContent>
-      </Header> */}
+      </Header>
 
     <CarList 
       data={[1,2,3,4,5,6,7,8]}
