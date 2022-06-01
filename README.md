@@ -1,11 +1,11 @@
 <h1 align="center">
-  <img alt="Rentx" title="Rentx" src="assets/logo.svg" />
+  <img alt="Rentx" title="Rentx" src="./src/assets/logo.svg" />
 </h1>
 
 <br>
 
 <p align="center">
-  <img alt="Rentx" src="assets/capa.png" width="100%">
+  <img alt="Rentx" src="./src/assets/capa.png" width="80%">
 </p>
 
 ## ✨ Tecnologias
