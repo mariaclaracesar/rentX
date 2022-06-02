@@ -1,7 +1,9 @@
 import styled from 'styled-components/native';
-
-import { RFValue } from 'react-native-responsive-fontsize';
 import { FlatList } from 'react-native';
+import { RFValue } from 'react-native-responsive-fontsize';
+import { CarDTO } from '../../dtos/CarDTO';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
+
 
 export const Container = styled.View`
   flex: 1;
@@ -32,10 +34,8 @@ export const TotalCars = styled.Text`
 `;
 
 export const CarList = styled(FlatList).attrs({
+  showsVerticalScrollIndicator: false,
   contentContainerStyle: {
-    padding: 24
+    paddingBottom: getBottomSpace() + 10,
   },
-  showsVerticalScrollIndicator: false
-})`
-
-`;
+})`` as React.ComponentType as new <DataListProps>() => FlatList<DataListProps>;
