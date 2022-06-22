@@ -3,6 +3,7 @@ import { FlatList } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { CarDTO } from '../../dtos/CarDTO';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
+import { RectButton } from 'react-native-gesture-handler';
 
 
 export const Container = styled.View`
@@ -33,9 +34,26 @@ export const TotalCars = styled.Text`
   color: ${({ theme }) => theme.colors.text};
 `;
 
-export const CarList = styled(FlatList).attrs({
-  showsVerticalScrollIndicator: false,
+export const CarList = styled(FlatList as new () => FlatList<ModelCar>)
+  .attrs({
   contentContainerStyle: {
-    paddingBottom: getBottomSpace() + 10,
+    padding: 24
   },
-})`` as React.ComponentType as new <DataListProps>() => FlatList<DataListProps>;
+  showsVerticalScrollIndicator: false
+})``; 
+
+export const MyCarsButton = styled(RectButton)`
+  width: 60px;
+  height: 60px;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 30px;
+
+  background-color: ${({ theme }) => theme.colors.main};
+
+  position: absolute;
+  bottom: 13px;
+  right: 22px;
+`;
