@@ -5,6 +5,7 @@ import theme from '../../styles/theme';
 
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
+import { PassWordInput } from '../../components/PassWordInput '
 
 import {
   Container,
@@ -42,6 +43,11 @@ export function SignIn(){
           autoCorrect={false}
           autoCapitalize='none'
         />
+
+        <PassWordInput 
+          iconName='lock'
+          placeholder='Senha'
+        />
       </Form>
 
       <Footer>
@@ -59,6 +65,7 @@ export function SignIn(){
           onPress={() => {}}
           loading={false}
         />
+
       </Footer>
     </Container>
   );
