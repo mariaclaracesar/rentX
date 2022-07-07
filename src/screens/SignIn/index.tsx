@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar'
 
-import theme from '../../styles/theme';
+import { useTheme } from 'styled-components';
 
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
@@ -17,6 +17,8 @@ import {
 } from './styles';
 
 export function SignIn(){
+  const theme = useTheme()
+
   return (
     <Container>
       <StatusBar 
@@ -37,16 +39,18 @@ export function SignIn(){
 
       <Form>
         <Input 
-          iconName="mail"
+          iconName='mail'
           placeholder='E-mail'
           keyboardType='email-address'
           autoCorrect={false}
           autoCapitalize='none'
+          placeholderTextColor={theme.colors.text_detail}
         />
 
         <PassWordInput 
           iconName='lock'
           placeholder='Senha'
+          placeholderTextColor={theme.colors.text_detail}
         />
       </Form>
 

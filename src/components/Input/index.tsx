@@ -16,7 +16,7 @@ interface Props extends TextInputProps {
 export function Input({
   iconName,
   ...rest
-} : Props ){
+}: Props ){
   const theme = useTheme();
 
   return (
