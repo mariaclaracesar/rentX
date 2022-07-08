@@ -19,7 +19,7 @@ export function Button({
   title,
   color,
   onPress,
-  enabled,
+  enabled = true,
   loading = false,
   light = false,
 }: Props){
