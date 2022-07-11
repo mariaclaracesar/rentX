@@ -34,6 +34,7 @@ import {
   About,
   Accessories,
   Footer
+
 } from './styles';
 
 interface Params {

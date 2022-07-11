@@ -9,7 +9,7 @@ import { useTheme } from 'styled-components';
 
 import { BackButton } from '../../../components/BackButton';
 import { Bullet } from '../../../components/Bullet';
-import { Input } from '../../../components/Input'
+import { PassWordInput } from '../../../components/PassWordInput '
 import { Button } from '../../../components/Button'
 
 import {
@@ -22,16 +22,12 @@ import {
   FormTitle
 } from './styles';
 
-export function SignUpFirstStep(){
+export function SignUpSecondStep(){
   const theme = useTheme();
   const navigation = useNavigation();
 
   function handleBack(){
     navigation.goBack()
-  }
-
-  function handleNextStep(){
-    navigation.navigate('SignUpSecondStep')
   }
 
   return (
@@ -55,31 +51,21 @@ export function SignUpFirstStep(){
           </Subtitle>
 
           <Form>
-            <FormTitle>1. Dados</FormTitle>
-              <Input 
-                iconName='user'
-                placeholder='Nome'
-                placeholderTextColor={theme.colors.text_detail}
-              />
+            <FormTitle>2. Senha</FormTitle>
+            <PassWordInput 
+              iconName='lock'
+              placeholder='Senha'
+            />
 
-              <Input 
-                iconName='mail'
-                placeholder='E-mail'
-                keyboardType='email-address'
-                placeholderTextColor={theme.colors.text_detail}
-              />
-              
-              <Input 
-                iconName='credit-card'
-                placeholder='CNH'
-                keyboardType='numeric'
-                placeholderTextColor={theme.colors.text_detail}
-              />
+            <PassWordInput 
+              iconName='lock'
+              placeholder='Repetir senha'
+            />
           </Form>
 
           <Button 
-            title='Próximo'
-            onPress={handleNextStep}
+            title='Cadastrar'
+            color={theme.colors.success}
           />
         </Container>
       </TouchableWithoutFeedback>
