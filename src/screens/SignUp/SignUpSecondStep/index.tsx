@@ -8,6 +8,7 @@ import {
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { useTheme } from 'styled-components';
 
+import { Confirmation } from '../../Confirmation'
 import { BackButton } from '../../../components/BackButton';
 import { Bullet } from '../../../components/Bullet';
 import { PassWordInput } from '../../../components/PassWordInput '
@@ -50,9 +51,15 @@ export function SignUpSecondStep(){
       return Alert.alert('Informe a senha e confirme.')
     }
 
-    if(!password != !passwordConfirm){
+    if(password != passwordConfirm){
       return Alert.alert('As senhas não são iguais.')
     }
+
+    navigation.navigate('Confirmation', {
+      nextScreenRoute: 'SignIn',
+      title: 'Conta Criada!',
+      message: `Agora é so fazer login\n e aproveitar.`
+    });
   }
 
   return (
